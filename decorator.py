@@ -3,6 +3,7 @@ def test_munge(a, **kwargs):
 
 def trial_decorator(f):
     def g(x):
+        global munge
         old_munge = munge
         munge = dict
 
