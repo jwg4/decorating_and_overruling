@@ -57,5 +57,5 @@ However, we try to construct a decorator that will do this:
 >>> decorated = decorator(fn)
 
 >>> decorated("asdfasdf")
-    "foo aaddffss bar {u"w": u"wozzat", u"k": u"keyber"} baz"
+"foo ['a', 'a', 'd', 'd', 'f', 'f', 's', 's'] bar {'k': 'keyber', 'w': 'wozzat'} baz"
 
