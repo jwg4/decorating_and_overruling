@@ -32,6 +32,16 @@ no way for us to pass in extra arguments to fn which will get used
 in the call to munge(). If we can't change fn(), it seems like we 
 have no way of making sure munge gets called with more than one argument.
 
+What we want fn to do:
+>>> munge(transform([4, 5, 1]), b=13, c=37)
+"foo [1, 4, 5] bar {'c': 37, 'b': 13} baz"
+
+What definitely won't work:
+>>> fn([4, 5, 1], b=13, c=37)
+Traceback (most recent call last):
+  ...
+TypeError: fn() got an unexpected keyword argument 'b'
+
 However, we try to construct a decorator that will do this:
 >>> def decorator(f):
 ...     def g(x):
