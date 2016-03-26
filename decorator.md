@@ -8,6 +8,9 @@
 >>> def munge(a, **kwargs):
 ...     return "foo %s bar %s baz" % (a, kwargs)
 
+>>> munge('boosh')
+'foo boosh bar {} baz'
+
 >>> def decorator(f):
 ...     def g(x):
 ...         global munge
