@@ -47,7 +47,7 @@ However, we try to construct a decorator that will do this:
 ...     def g(x):
 ...         global munge
 ...         old_munge = munge
-...         munge = dict
+...         munge = list
 ... 
 ...         old_ret = f(x)
 ...         z = dict(w="wozzat", k="keyber")
