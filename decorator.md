@@ -1,9 +1,12 @@
+The purpose of this file is as follow: we have the two functions
+munge and transform:
 >>> def transform(x):
 ...     return sorted(x)
 
 >>> def munge(a, **kwargs):
 ...     return "foo %s bar %s baz" % (a, kwargs)
 
+They are quite straightforward, and we make some basic tests on their operation:
 >>> munge('boosh')
 'foo boosh bar {} baz'
 
