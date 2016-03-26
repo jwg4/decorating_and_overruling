@@ -1,15 +1,15 @@
 >>> def transform(x):
 ...     return sorted(x)
 
->>> def fn(x):
-...     y = transform(x)
-...     return munge(y)
-
 >>> def munge(a, **kwargs):
 ...     return "foo %s bar %s baz" % (a, kwargs)
 
 >>> munge('boosh')
 'foo boosh bar {} baz'
+
+>>> def fn(x):
+...     y = transform(x)
+...     return munge(y)
 
 >>> def decorator(f):
 ...     def g(x):
