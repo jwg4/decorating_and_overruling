@@ -7,5 +7,10 @@ def outer_function():
 def function():
     print "This is the function that was redefined after the outer function was defined."
 
-outer_function()
 
+def run_tests():
+    """
+>>> outer_function()
+This is the function that was redefined after the outer function was defined.
+    """
+    pass
