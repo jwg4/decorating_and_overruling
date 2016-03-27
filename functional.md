@@ -7,3 +7,8 @@ In Python functions can be passed as arguments to functions:
 >>> evaluate_at_4(sqrt)
 2.0
 
+>>> def repeat_x(n):
+...     return 'x' * n
+>>> evaluate_at_4(repeat_x)
+'xxxx'
+
