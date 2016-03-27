@@ -12,3 +12,14 @@ In Python functions can be passed as arguments to functions:
 >>> evaluate_at_4(repeat_x)
 'xxxx'
 
+Functions can also return functions:
+
+A trivial example:
+>>> def create_a_simple_function():
+...     def simple_function():
+...         print 'foo'
+...     return simple_function
+
+>>> my_function = create_a_simple_function()
+>>> my_function()
+foo
