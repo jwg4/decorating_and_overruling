@@ -57,3 +57,18 @@ foo
 >>> my_dict = { 'g': [1, 2, 3], 'h': b }
 >>> my_dict['h']()
 foo
+
+We can also use variables to pass functions into a function:
+>>> y = float
+>>> evaluate_at_4(y)
+4.0
+
+>>> def say_hello_n_times(n):
+...     for i in range(n):
+...         print 'hello'
+>>> w = say_hello_n_times
+>>> evaluate_at_4(w)
+hello
+hello
+hello
+hello
