@@ -47,6 +47,8 @@ Python
 World
 
 Functions which do not have a return statement, implicitly return None.
+>>> s
+
 >>> str(s)
 'None'
 
