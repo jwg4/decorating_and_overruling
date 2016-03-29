@@ -28,3 +28,12 @@ Exceptions are displayed like the output you would see normally when an exceptio
 Traceback (most recent call last):
  ...
 SyntaxError: invalid syntax
+
+Finally, is an expression evaluates to None, nothing is displayed.
+>>> None
+
+You can check for None eg. by doing str().
+>>> x = None
+>>> x
+>>> str(x)
+'None'
