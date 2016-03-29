@@ -37,3 +37,5 @@ You can check for None eg. by doing str().
 >>> x
 >>> str(x)
 'None'
+>>> x is None
+True
