@@ -22,3 +22,31 @@ Some functions have several arguments
 
 >>> complicated_calculation(1, 2, 3)
 11
+
+Functions do not have to return anything, they could exist only for their side-effects, or what happens when they are called.
+>>> def print_some_stuff():
+...     print 'Hello'
+...     print 'Python'
+...     print 'World'
+
+>>> print_some_stuff()
+Hello
+Python
+World
+
+If we assign the results of a function to a variable, the Python REPL will not display any output
+>>> x = do_something()
+
+>>> x
+'We are done'
+
+But side effects will still be shown.
+>>> s = print_some_stuff()
+Hello
+Python
+World
+
+Functions which do not have a return statement, implicitly return None.
+>>> str(s)
+'None'
+
