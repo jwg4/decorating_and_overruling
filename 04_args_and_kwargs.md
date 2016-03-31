@@ -22,3 +22,25 @@ Traceback (most recent call last):
  ...
 TypeError: unsupported operand type(s) for +: 'int' and 'list'
 
+However, you can pass in a list of all the individual arguments, by using * when you call the function.
+>>> sum_many_numbers(*[0, 1])
+1
+
+This use of the * notation also works for functions which are defined in the normal way:
+>>> def sum_three_numbers(first, second, third):
+...     return first + second + third
+
+>>> sum_three_numbers(*[10, 11, 12])
+33
+>>> sum_three_numbers(*[10, 11, 12, 13])
+Traceback (most recent call last):
+ ...
+TypeError: sum_three_numbers() takes exactly 3 arguments (4 given)
+>>> sum_three_numbers(*[])
+Traceback (most recent call last):
+ ...
+TypeError: sum_three_numbers() takes exactly 3 arguments (0 given)
+
+Got that? * when you define the function, means 'take the arguments, and put them into a list'.
+* when you call the function, means 'take this list, and use the members as successive arguments'.
+Using * in the definition doesn't mean you do or don't have to use it in the call, and vice versa.
