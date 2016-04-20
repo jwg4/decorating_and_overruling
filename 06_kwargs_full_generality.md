@@ -16,6 +16,7 @@ and a dict of further named arguments.
 <BLANKLINE>
 0 [] {}
 
+We can add extra unnamed arguments.
 >>> print_argument_info(1, 2, 3, 4, 'hello', 'world')
 1
 2!
