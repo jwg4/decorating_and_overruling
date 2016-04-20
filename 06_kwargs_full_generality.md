@@ -46,3 +46,20 @@ We can also add some extra named arguments, whether alongside some required name
 (boo -- bar)
 <BLANKLINE>
 2 ['y', 'foo_level'] {'y': 'baz', 'foo_level': 'foo'}
+
+We could also combine additional named and additional unnamed arguments:
+>>> print_argument_info(1, 2, 3, 4, 'hello', 'world', y='baz', foo_level='foo')
+1
+2!
+(3 -- 4)
+hello, world
+2 ['y', 'foo_level'] {'y': 'baz', 'foo_level': 'foo'}
+
+But we can't add extra unnamed arguments, if we are using named arguments for some of the required args.
+>>> print_argument_info(1, 2, 'hello', 'world', fourth='boo', third='bar', y='baz', foo_level='foo')
+Traceback (most recent call last):
+ ...
+TypeError: print_argument_info() got multiple values for keyword argument 'fourth'
+
+The reason for this is that the supposedly 'extra' unnamed arguments get interpreted as the normal arguments in the argument list,
+and the later keyword arguments seem to be duplicate definitions. In other words, YOU CAN'T CALL WITH EXTRA UNNAMED ARGS UNLESS YOU ARE USING ALL THE NORMAL ARGUMENTS. This makes sense, because how would Python know that you want the later unnamed arguments to NOT be interpreted as the next arguments in the argument list?
