@@ -15,3 +15,10 @@ and a dict of further named arguments.
 (3 -- 4)
 <BLANKLINE>
 0 [] {}
+
+>>> print_argument_info(1, 2, 3, 4, 'hello', 'world')
+1
+2!
+(3 -- 4)
+hello, world
+0 [] {}
