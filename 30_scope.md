@@ -31,3 +31,23 @@ default
 >>> function_using_variable_from_global_scope()
 4
 
+>>> def function_overwriting_variable_from_global_scope():
+...     if y is None:
+...         y = 'default'
+
+>>> function_overwriting_variable_from_global_scope()
+Traceback (most recent call last):
+...
+UnboundLocalError: local variable 'y' referenced before assignment
+
+>>> y = None
+>>> function_overwriting_variable_from_global_scope()
+Traceback (most recent call last):
+...
+UnboundLocalError: local variable 'y' referenced before assignment
+
+>>> y = 'asdf'
+>>> function_overwriting_variable_from_global_scope()
+Traceback (most recent call last):
+...
+UnboundLocalError: local variable 'y' referenced before assignment
