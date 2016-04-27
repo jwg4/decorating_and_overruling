@@ -24,3 +24,10 @@ foo
 >>> yet_another_function()
 default
 
+>>> x = 4
+>>> def function_using_variable_from_global_scope():
+...     print x
+
+>>> function_using_variable_from_global_scope()
+4
+
