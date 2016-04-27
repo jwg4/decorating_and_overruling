@@ -26,3 +26,15 @@ When you call a function, ** means to take a dict, and expand it into individual
 Mummy bear's porridge was too hot.
 Daddy bear's porridge was too cold.
 Baby bear's porridge was just right.
+
+>>> d = {'daddy': 'cold', 'mummy': 'hot'}
+>>> what_they_ate(**d)
+Traceback (most recent call last):
+...
+TypeError: what_they_ate() takes exactly 3 arguments (2 given)
+
+>>> d = {'daddy': 'cold', 'mummy': 'hot', 'baby': 'right', 'goldilocks': 'cheeky'}
+>>> what_they_ate(**d)
+Traceback (most recent call last):
+...
+TypeError: what_they_ate() got an unexpected keyword argument 'goldilocks'
