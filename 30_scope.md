@@ -22,3 +22,5 @@ foo
 >>> yet_another_function('foo')
 foo
 >>> yet_another_function()
+default
+
