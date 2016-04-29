@@ -14,3 +14,19 @@ This little pig had None
 This little pig went to East Ham
 This little pig stayed at school
 This little pig had swine flu
+
+This includes the situation where all arguments are optional:
+>>> def product_of_up_to_five_numbers(a=1, b=1, c=1, d=1, e=1):
+...     return a * b * c * d * e
+
+>>> product_of_up_to_five_numbers()
+1
+
+>>> product_of_up_to_five_numbers(4)
+4
+
+>>> product_of_up_to_five_numbers(2, 2, 2, 2)
+16
+
+>>> product_of_up_to_five_numbers(2, 3, 5, 7, 11)
+2310
