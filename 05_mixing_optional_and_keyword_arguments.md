@@ -30,3 +30,30 @@ This includes the situation where all arguments are optional:
 
 >>> product_of_up_to_five_numbers(2, 3, 5, 7, 11)
 2310
+
+If all arguments are optional. we could include any subset we choose, in any order we choose, by passing them with names:
+>>> product_of_up_to_five_numbers(d=21, b=33)
+693
+
+>>> product_of_up_to_five_numbers(e=11, d=13, c=7, a=3, b=41)
+123123
+
+To combine unnamed and named arguments, we have to put the named arguments first
+>>> product_of_up_to_five_numbers(1, 2, d=3)
+6
+
+>>> product_of_up_to_five_numbers(d=10, 1, 2)
+Traceback (most recent call last):
+...
+SyntaxError: non-keyword arg after keyword arg
+
+>>> product_of_up_to_five_numbers(7, 7, 7, b=7, 7)
+Traceback (most recent call last):
+...
+SyntaxError: non-keyword arg after keyword arg
+
+This applies even if we put a named argument first, and it actually refers to the first argument:
+>>> product_of_up_to_five_numbers(a=10, 12)
+Traceback (most recent call last):
+...
+SyntaxError: non-keyword arg after keyword arg
