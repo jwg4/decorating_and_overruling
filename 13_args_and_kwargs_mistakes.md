@@ -11,3 +11,9 @@ Traceback (most recent call last):
 ...
 SyntaxError: invalid syntax
 
+The same applies to the following:
+>>> print_three_things(a = **{'a': 1, 'b': 2, 'c': 3})
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+
