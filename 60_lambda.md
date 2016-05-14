@@ -4,3 +4,6 @@ A lambda is a minimal way of creating a function from a single expression:
 
 >>> f(4)
 6
+
+>>> f.__name__
+'<lambda>'
