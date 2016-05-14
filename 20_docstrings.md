@@ -9,3 +9,7 @@ The definition of a function can include a *docstring*, a quoted string which is
 (2010, 9)
 >>> next_month.__doc__
 'Given a month and a year, returns the following month.'
+
+Functions also have a built-in attribute __name__, the name of the function.
+>>> next_month.__name__
+'next_month'
