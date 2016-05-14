@@ -13,3 +13,15 @@ The definition of a function can include a *docstring*, a quoted string which is
 Functions also have a built-in attribute __name__, the name of the function.
 >>> next_month.__name__
 'next_month'
+
+Both __doc__ and __name__ can be changed outside of the function definition.
+>>> next_month.__name__ = 'my_new_function_name'
+
+>>> next_month.__name__
+'my_new_function_name'
+
+Reassigning the name does not mean that a function with that name is defined:
+>>> my_new_function_name(2012, 10)
+Traceback (most recent call last):
+...
+NameError: name 'my_new_function_name' is not defined
