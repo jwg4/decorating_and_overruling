@@ -28,7 +28,7 @@ How imperative code works is that any collection of instructions can follow any 
 ...         return Maybe(log(x))
 ...     return Maybe(None)
 
->>> safe_log(safe_log(safe_log(Maybe(1.0))))
+>>> safe_log(safe_log(safe_log(Maybe(2.0))))
 Nothing
 
 >>> safe_log(safe_log(safe_log(Maybe(10.0))))
