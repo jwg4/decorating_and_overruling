@@ -32,7 +32,7 @@ UnboundLocalError: local variable 'x' referenced before assignment
 Why does this happen? Because if there is an assignment to a variable inside a scope, then the Python compiler assumes that the variable is local to that scope. So in the first function the compiler correctly looks for the declaration of x in the outer scope, but in the second case it ignores this, and assumes that x is a new variable, local to inner().
 
 This is done to protect you, in case you have:
->>> import date
+>>> from datetime import date
 
 and then (maybe thousands of lines later:
 >>> def parse_data(s):
