@@ -16,4 +16,3 @@ The same applies to the following:
 Traceback (most recent call last):
 ...
 SyntaxError: invalid syntax
-
