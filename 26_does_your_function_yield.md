@@ -46,3 +46,23 @@ IndentationError: unexpected indent
 ... 
 >>> list(never_any_points_and_return(5))
 []
+
+This affects looping over the results of functions:
+>>> def function_with_yield():
+...     if True is False:
+...             yield
+...     return
+... 
+>>> for i in function_with_yield():
+...     print 'Hello'
+... 
+>>> def function_without_yield():
+...     return
+... 
+>>> for i in function_without_yield():
+...     print 'Hello'
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'NoneType' object is not iterable
+
