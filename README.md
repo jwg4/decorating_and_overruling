@@ -1,4 +1,7 @@
 # decorating_and_overruling
+
+[![Build Status](https://travis-ci.org/jwg4/decorating_and_overruling.svg?branch=master)](https://travis-ci.org/jwg4/decorating_and_overruling)
+
 This is a collection of examples and experiments about functions, decorators and related topics in Python.
 The original motivation for this example code was a series of experiments done to try and find a way of calling code from an external library, changing exactly how it worked, but without modifying that external library directly.
 This is explained in the file 50_motivation.md and the immediately following files give some examples of things that I tried.
