@@ -2,8 +2,8 @@
 ...     for i in range(0, n):
 ...         yield 'a'
 ... 
->>> some_points(1)
-<generator object some_points at 0x7f90a49540a0>
+>>> some_points(1) # doctest: +ELLIPSIS
+<generator object some_points at 0x...>
 >>> list(some_points(1))
 ['a']
 >>> list(some_points(0))
