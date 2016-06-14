@@ -23,20 +23,6 @@ TypeError: 'NoneType' object is not iterable
 ...     for i in range(0, n):
 ...         yield 'a'
 ...     return
-  File "<stdin>", line 4
-    return
-         ^
-IndentationError: unindent does not match any outer indentation level
->>>     return
-  File "<stdin>", line 1
-    return
-    ^
-IndentationError: unexpected indent
->>> def some_points_and_return(n):
-...     for i in range(0, n):
-...             yield 'a'
-...     return
-... 
 >>> list(some_points_and_return(0))
 []
 >>> def never_any_points_and_return(n):
