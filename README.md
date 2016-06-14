@@ -1,4 +1,4 @@
-# decorating_and_overruling
+# Exemplary Functions and Functional Examples
 
 [![Build Status](https://travis-ci.org/jwg4/decorating_and_overruling.svg?branch=master)](https://travis-ci.org/jwg4/decorating_and_overruling)
 
