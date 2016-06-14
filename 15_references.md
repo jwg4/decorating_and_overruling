@@ -31,3 +31,15 @@ AttributeError: 'str' object has no attribute 'append'
 ['foo', 'bar', 'baz']
 >>> b
 [5, 4, 3, 2, 1]
+
+>>> x = []
+>>> y = [1, 2, 3]
+>>> z = (x, y)
+>>> z
+([], [1, 2, 3])
+>>> x.append(10)
+>>> z
+([10], [1, 2, 3])
+>>> y.remove(2)
+>>> z
+([10], [1, 3])
