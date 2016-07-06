@@ -11,3 +11,23 @@ The following code cannot be run as a doctest since it will overwhelm the proces
 #  >>> list(natural_numbers())
 #  ^C^Z
 #  [1]+  Stopped                 python
+
+
+More code which can't be run:
+>>> def generate_once():
+...     yield 1
+... 
+>>> generate_once()
+<generator object generate_once at 0x7f52a7e6a3c0>
+>>> import sys
+>>> sys.exit() for x in generate_once()
+  File "<stdin>", line 1
+    sys.exit() for x in generate_once()
+                 ^
+SyntaxError: invalid syntax
+>>> (sys.exit() for x in generate_once())
+<generator object <genexpr> at 0x7f52a7e970f0>
+>>> foo = (sys.exit() for x in generate_once())
+
+This line will exit python:
+#  >>> list(foo)
