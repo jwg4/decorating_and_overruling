@@ -17,15 +17,17 @@ More code which can't be run:
 >>> def generate_once():
 ...     yield 1
 ... 
->>> generate_once() +ELLIPSIS
+>>> generate_once() # doctest: +ELLIPSIS
 <generator object generate_once at 0x...>
 >>> import sys
 >>> sys.exit() for x in generate_once()
-  File "<stdin>", line 1
+Exception raised:
+    Traceback (most recent call last):
+    File "<stdin>", line 1
     sys.exit() for x in generate_once()
                  ^
 SyntaxError: invalid syntax
->>> (sys.exit() for x in generate_once()) +ELLIPSIS
+>>> (sys.exit() for x in generate_once()) # doctest: +ELLIPSIS
 <generator object <genexpr> at 0x...>
 >>> foo = (sys.exit() for x in generate_once())
 
