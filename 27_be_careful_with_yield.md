@@ -21,11 +21,8 @@ More code which can't be run:
 <generator object generate_once at 0x...>
 >>> import sys
 >>> sys.exit() for x in generate_once()
-Exception raised:
-    Traceback (most recent call last):
-    File "<stdin>", line 1
-    sys.exit() for x in generate_once()
-                 ^
+Traceback (most recent call last):
+ ...
 SyntaxError: invalid syntax
 >>> (sys.exit() for x in generate_once()) # doctest: +ELLIPSIS
 <generator object <genexpr> at 0x...>
