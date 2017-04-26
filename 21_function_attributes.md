@@ -2,7 +2,7 @@ Not just the __doc__ attribute but arbitrary attributes of functions can be set.
 
 >>> def f(x):
 ...     return x + 3
-... 
+
 >>> f(4)
 7
 >>> f  # doctest: +ELLIPSIS
