@@ -19,6 +19,7 @@ Not just the __doc__ attribute but arbitrary attributes of functions can be set.
 15
 >>> g.foo
 'whatever'
+
 Attributes of functions can be any type of object: lists, class instances, other functions...
 >>> f.asdf = ["Q", "W", "E", "R", "T", "Y"]
 >>> f.blah = g
