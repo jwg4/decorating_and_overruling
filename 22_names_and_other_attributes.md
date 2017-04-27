@@ -23,12 +23,3 @@ However, we can change the name
 Because there is really only one function, and two variables which point to it, the original function changes name too.
 >>> hello  # doctest: +ELLIPSIS
 <function my_fn at 0x...>
-
-One way of checking what attributes are set is to use __dict__
->>> hello.__dict__()
-{}
-
->>> import datetime
->>> hello.foo = datetime.datetime(2017, 4, 27, 1, 1, 1)
->>> hello.__dir__()
-{'foo': datetime.datetime(2017, 4, 27, 1, 1, 1)
