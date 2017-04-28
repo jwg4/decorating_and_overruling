@@ -26,6 +26,9 @@ Attributes of functions can be any type of object: lists, class instances, other
 
 
 One way of checking what attributes are set is to use __dict__
+>>> def hello(name):
+...     print("hello %s" % name)
+
 >>> hello.__dict__()
 {}
 
