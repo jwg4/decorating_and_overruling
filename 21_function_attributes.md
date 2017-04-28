@@ -35,4 +35,4 @@ One way of checking what attributes are set is to use __dict__
 >>> import datetime
 >>> hello.foo = datetime.datetime(2017, 4, 27, 1, 1, 1)
 >>> hello.__dict__
-{'foo': datetime.datetime(2017, 4, 27, 1, 1, 1)
+{'foo': datetime.datetime(2017, 4, 27, 1, 1, 1)}
