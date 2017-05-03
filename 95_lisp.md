@@ -14,6 +14,6 @@
 
 >>> x = cons(1, cons(2, cons(3, 4)))
 >>> x # doctest: +ELLIPSIS
-<function cons.<locals>.return_first_or_second at 0x...>
+<function return_first_or_second at 0x...>
 >>> car(cdr(x))
 2
