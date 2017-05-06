@@ -29,3 +29,15 @@ We could call the function directly, provided that we identify the function usin
 >>> Car.drive(x)
 Driving a Car.
 10
+
+So x.drive() is syntactic sugar which does two things: identify the function drive() which belongs to x's type, and call it with x as the first parameter. The error messages reflect the number of parameters, including the implicit self.
+
+>>> Car.drive()
+Traceback (most recent call last):
+ ...
+TypeError: drive() missing 1 required positional argument: 'self'
+
+>>> x.drive(4)
+Traceback (most recent call last):
+ ...
+TypeError: drive() takes 1 positional argument but 2 were given
