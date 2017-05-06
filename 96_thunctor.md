@@ -10,10 +10,5 @@ First, let's take an example of where we can't recurse deeply enough:
 16
 >>> power_of_two(1000)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 4, in power_of_two
-  File "<stdin>", line 4, in power_of_two
-  File "<stdin>", line 4, in power_of_two
-  [Previous line repeated 994 more times]
-  File "<stdin>", line 2, in power_of_two
+ ...
 RecursionError: maximum recursion depth exceeded in comparison
