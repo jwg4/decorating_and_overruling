@@ -35,9 +35,9 @@ So x.drive() is syntactic sugar which does two things: identify the function dri
 >>> Car.drive()
 Traceback (most recent call last):
  ...
-TypeError: drive() missing 1 required positional argument: 'self'
+TypeError: unbound method drive() must be called with Car instance as first argument (got nothing instead)
 
 >>> x.drive(4)
 Traceback (most recent call last):
  ...
-TypeError: drive() takes 1 positional argument but 2 were given
+TypeError: drive() takes exactly 1 argument (2 given)
