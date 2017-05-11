@@ -11,4 +11,4 @@ First, let's take an example of where we can't recurse deeply enough:
 >>> power_of_two(1000)
 Traceback (most recent call last):
  ...
-RecursionError: maximum recursion depth exceeded in comparison
+RuntimeError: maximum recursion depth exceeded
