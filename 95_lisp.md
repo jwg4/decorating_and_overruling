@@ -15,10 +15,13 @@ This is an example of how we can create CONS, CAR and CDR, the building blocks o
 ...     return l(2)
 
 >>> x = cons(1, cons(2, cons(3, 4)))
+
 A 'list' is actually a function.
 >>> x # doctest: +ELLIPSIS
 <function return_first_or_second at 0x...>
+
 We haven't set up any way of prettily printing the contents of the list.
 >>> car(cdr(x))
 2
+
 But the individual elements are just the Python types we put into the list.
