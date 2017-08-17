@@ -12,3 +12,6 @@ First, let's take an example of where we can't recurse deeply enough:
 Traceback (most recent call last):
  ...
 RuntimeError: maximum recursion depth exceeded
+
+
+This example is in some way the dual of the one in file 95. There we used functions and function evaluation to create a data structure which looks like a list. Here we use a list to store functions, rather than simply evaluate our way through the stack of functions.
