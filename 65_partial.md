@@ -7,7 +7,7 @@
 5
 
 >>> g = partial(f)
->>> g
+>>> g  # doctest: +ELLIPSIS
 <functools.partial object at 0x...>
 >>> g()
 Traceback (most recent call last):
@@ -17,7 +17,7 @@ TypeError: f() takes exactly 2 arguments (0 given)
 3
 
 >>> h = partial(f, 10)
->>> h
+>>> h  # doctest: +ELLIPSIS
 <functools.partial object at 0x...>
 >>> h()
 Traceback (most recent call last):
@@ -29,7 +29,7 @@ TypeError: f() takes exactly 2 arguments (1 given)
 16
 
 >>> j = partial(f, 7, 7)
->>> j
+>>> j  # doctest: +ELLIPSIS
 <functools.partial object at 0x...>
 >>> j()
 14
