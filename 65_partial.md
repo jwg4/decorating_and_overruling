@@ -60,8 +60,8 @@ We could use partial on a function which doesn't have any arguments, although it
 >>> do_something()
 Hello
 >>> new_version = partial(do_something)
->>> new_version
-functools.partial(<function do_something at 0x0190C660>)
+>>> new_version  # doctest: +ELLIPSIS
+<functools.partial object at 0x...>
 >>> new_version()
 Hello
 
