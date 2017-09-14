@@ -26,8 +26,7 @@ We take a function which we could apply it to:
 15
 >>> add_five(None)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 2, in add_five
+...
 TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
 
 ```
@@ -35,8 +34,8 @@ TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
 Let's check some of the details of how this function is represented:
 
 ```
->>> add_five
-<function add_five at 0x01D3C660>
+>>> add_five  # doctest: +ELLIPSIS
+<function add_five at 0x...>
 >>> add_five.__doc__
 ' Adds five to things. '
 
@@ -59,8 +58,8 @@ Now let's define the function again, this time using the decorator.
 It works, but we have messed up some of the metadata of the function a bit.
 
 ```
->>> add_five
-<function protect_from_none.<locals>.temp at 0x03AAFE40>
+>>> add_five  # doctest: +ELLIPSIS
+<function temp at 0x...>
 >>> add_five.__doc__
 
 ```
@@ -68,6 +67,7 @@ It works, but we have messed up some of the metadata of the function a bit.
 To keep this metadata in the decorated function, we use `wraps` in the decorator.
 
 ```
+>>> from functools import wraps
 >>> def protect_from_none(f):
 ...     @wraps(f)
 ...     def temp(x):
@@ -86,8 +86,8 @@ When we defined the function `temp`, we specified that it was supposed to be a r
 ...     """ Adds five to things. """
 ...     return n + 5
 ...
->>> add_five
-<function add_five at 0x03AAFE88>
+>>> add_five  # doctest: +ELLIPSIS
+<function add_five at 0x...>
 >>> add_five.__doc__
 ' Adds five to things. '
 
