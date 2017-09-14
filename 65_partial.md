@@ -1,3 +1,5 @@
+From the functools built-in package, `partial` is a function which 'partially evaluates' functions. This means taking a function of multiple arguments and some of the arguments, and creating a function which needs the missing arguments, but has the other arguments 'pre-set'.
+
 >>> from functools import partial
 
 >>> def f(x, y):
