@@ -47,3 +47,21 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: f() takes exactly 2 arguments (3 given)
 ```
+
+We could use partial on a function which doesn't have any arguments, although it doesnt seem very useful:
+
+```
+>>> def do_something():
+...     print("Hello")
+>>> do_something()
+Hello
+>>> new_version = partial(do_something)
+>>> new_version
+functools.partial(<function do_something at 0x0190C660>)
+>>> new_version()
+Hello
+```
+
+The new function behaves exactly the same as the original one.
+
+Everything that we can do with partial, we could also do with lambdas, or with def, and a function which returns a function. Partial makes a common manipulation much easier.
