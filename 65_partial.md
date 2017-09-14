@@ -8,6 +8,7 @@ From the functools built-in package, `partial` is a function which 'partially ev
 ...
 >>> f(2, 3)
 5
+
 ```
 
 ```
@@ -20,6 +21,7 @@ Traceback (most recent call last):
 TypeError: f() takes exactly 2 arguments (0 given)
 >>> g(1, 2)
 3
+
 ```
 
 ```
@@ -34,6 +36,7 @@ TypeError: f() takes exactly 2 arguments (1 given)
 14
 >>> h(6)
 16
+
 ```
 
 ```
@@ -46,6 +49,7 @@ TypeError: f() takes exactly 2 arguments (1 given)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: f() takes exactly 2 arguments (3 given)
+
 ```
 
 We could use partial on a function which doesn't have any arguments, although it doesnt seem very useful:
@@ -60,6 +64,7 @@ Hello
 functools.partial(<function do_something at 0x0190C660>)
 >>> new_version()
 Hello
+
 ```
 
 The new function behaves exactly the same as the original one.
