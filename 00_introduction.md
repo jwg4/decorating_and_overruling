@@ -4,10 +4,10 @@ As long as you have seen functions before in Python, you should be able to follo
 But let's review a little about how doctest works.
 In general the doctest pieces should look exactly like an interactive Python session.
 
-Code which is input starts with '>>>'
+Code which is to be run starts with '>>>'
 >>> import json
 
-Blocks are continued with lines that start with '...', and are otherwise indented normally:
+Blocks are continued with lines that start with '...', and are otherwise indented as usual:
 >>> def function(x):
 ...     return 'foo'
 
@@ -29,7 +29,7 @@ Traceback (most recent call last):
  ...
 SyntaxError: invalid syntax
 
-Finally, is an expression evaluates to None, nothing is displayed.
+Finally, if an expression evaluates to None, nothing is displayed.
 >>> None
 
 You can check for None eg. by doing str().
