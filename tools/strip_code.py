@@ -1,3 +1,5 @@
+import sys
+
 def clean_line(line):
     if not line.rstrip():
         return line
@@ -14,3 +16,9 @@ def clean_file(ifile, ofile):
                 out = clean_line(l)
                 if out is not None:
                     o.write(out)
+
+
+if __name__ == '__main__':
+    src = sys.argv[1]
+    dest = sys.argv[2]
+    clean_file(src, dest)

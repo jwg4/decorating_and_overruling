@@ -4,6 +4,7 @@ python:
 script:
 - python -m doctest *.md
 - python -m unittest discover tools
+- tools/run_md_flake8.sh
 notifications:
   email: false
 
