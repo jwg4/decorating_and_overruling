@@ -3,6 +3,7 @@ python:
   - '2.7'
 script:
 - python -m doctest *.md
+- python -m unittest discover tools
 notifications:
   email: false
 
