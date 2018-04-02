@@ -36,7 +36,7 @@ class TestCleanFile(unittest.TestCase):
     def remove_dest(self):
         try:
             os.remove(self.dest)
-        except FileNotFoundError:
+        except Exception:
             pass
 
     def test_it_does_something(self):
