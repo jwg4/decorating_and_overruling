@@ -3,4 +3,6 @@ def clean_line(line):
         return line
     if line.startswith(">>>"):
         return line[4:]
+    if line.startswith("..."):
+        return line[4:]
     return None
