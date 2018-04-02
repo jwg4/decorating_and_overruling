@@ -11,3 +11,7 @@ class TestCleanLine(unittest.TestCase):
         line = ">>> j = partial(f, 7, 7)\n"
         expected = "j = partial(f, 7, 7)\n"
         self.assertEqual(clean_line(line), expected)
+
+    def test_text_line(self):
+        line = "We could use partial on a function which doesn't have any arguments, although it doesnt seem very useful:\n"
+        self.assertIsNone(clean_line(line))
