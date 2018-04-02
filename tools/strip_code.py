@@ -1,5 +1,6 @@
 def clean_line(line):
-    line = line.rstrip()
-    if not line:
-        return "\n"
+    if not line.rstrip():
+        return line
+    if line.startswith(">>>"):
+        return line
     return None
