@@ -1,3 +1,4 @@
+>>> import sys
 >>> def f():
 ...     name = sys._getframe().f_code.co_name
 ...     globals().pop(name)
