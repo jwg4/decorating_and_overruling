@@ -9,4 +9,5 @@
 Traceback (most recent call last):
   ...
 NameError: name 'f' is not defined
+
 ```
